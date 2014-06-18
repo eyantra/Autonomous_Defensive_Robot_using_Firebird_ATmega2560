@@ -1,0 +1,134 @@
+\hypertarget{group12_8c}{
+\section{group12.c File Reference}
+\label{group12_8c}\index{group12.c@{group12.c}}
+}
+{\ttfamily \#include $<$avr/io.h$>$}\par
+{\ttfamily \#include $<$avr/interrupt.h$>$}\par
+{\ttfamily \#include $<$util/delay.h$>$}\par
+{\ttfamily \#include \char`\"{}servo\_\-motor.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}lcd.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group12_8c_a0c6063fcb1153fa4c8c348b9e759be78}{buzzer\_\-pin\_\-config} (void)
+\item 
+void \hyperlink{group12_8c_a5c2ba800834495bb295891490cb1c760}{port\_\-init} ()
+\item 
+void \hyperlink{group12_8c_a4dd394839cc1e77986c84b3a3679bcd8}{buzzer\_\-on} (void)
+\item 
+void \hyperlink{group12_8c_a93d07c81691fec7a85ea85117d6eca4f}{buzzer\_\-off} (void)
+\item 
+void \hyperlink{group12_8c_abbbf5055286d09a73b87f57f71dfd0b9}{uart0\_\-init} (void)
+\item 
+\hyperlink{group12_8c_ab5f8e79f6ffa3be348924e573e8dcfd1}{SIGNAL} (SIG\_\-USART0\_\-RECV)
+\item 
+void \hyperlink{group12_8c_ab01199c927ceda6f9520c7afb0f1b099}{init\_\-devices} ()
+\item 
+int \hyperlink{group12_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{group12_8c_a433b1c9921d3b90f7c145c781a43f325}{data}
+\item 
+int \hyperlink{group12_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}{count} = 0
+\item 
+int \hyperlink{group12_8c_a3ad2418bacc6ee3c0ff8cc6ed2832ec9}{degree} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group12_8c_a93d07c81691fec7a85ea85117d6eca4f}{
+\index{group12.c@{group12.c}!buzzer\_\-off@{buzzer\_\-off}}
+\index{buzzer\_\-off@{buzzer\_\-off}!group12.c@{group12.c}}
+\subsubsection[{buzzer\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void buzzer\_\-off (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_a93d07c81691fec7a85ea85117d6eca4f}
+function to stop the buzzer. \hypertarget{group12_8c_a4dd394839cc1e77986c84b3a3679bcd8}{
+\index{group12.c@{group12.c}!buzzer\_\-on@{buzzer\_\-on}}
+\index{buzzer\_\-on@{buzzer\_\-on}!group12.c@{group12.c}}
+\subsubsection[{buzzer\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void buzzer\_\-on (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_a4dd394839cc1e77986c84b3a3679bcd8}
+Function that starts the buzzer. \hypertarget{group12_8c_a0c6063fcb1153fa4c8c348b9e759be78}{
+\index{group12.c@{group12.c}!buzzer\_\-pin\_\-config@{buzzer\_\-pin\_\-config}}
+\index{buzzer\_\-pin\_\-config@{buzzer\_\-pin\_\-config}!group12.c@{group12.c}}
+\subsubsection[{buzzer\_\-pin\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void buzzer\_\-pin\_\-config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_a0c6063fcb1153fa4c8c348b9e759be78}
+Setting the congfigrations for the buzzer. \hypertarget{group12_8c_ab01199c927ceda6f9520c7afb0f1b099}{
+\index{group12.c@{group12.c}!init\_\-devices@{init\_\-devices}}
+\index{init\_\-devices@{init\_\-devices}!group12.c@{group12.c}}
+\subsubsection[{init\_\-devices}]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-devices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_ab01199c927ceda6f9520c7afb0f1b099}
+Function To Initialize all The Devices. \hypertarget{group12_8c_a840291bc02cba5474a4cb46a9b9566fe}{
+\index{group12.c@{group12.c}!main@{main}}
+\index{main@{main}!group12.c@{group12.c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_a840291bc02cba5474a4cb46a9b9566fe}
+Main function that does the initializations and brings the motors to initial position. \hypertarget{group12_8c_a5c2ba800834495bb295891490cb1c760}{
+\index{group12.c@{group12.c}!port\_\-init@{port\_\-init}}
+\index{port\_\-init@{port\_\-init}!group12.c@{group12.c}}
+\subsubsection[{port\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void port\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_a5c2ba800834495bb295891490cb1c760}
+Function to initialize ports \hypertarget{group12_8c_ab5f8e79f6ffa3be348924e573e8dcfd1}{
+\index{group12.c@{group12.c}!SIGNAL@{SIGNAL}}
+\index{SIGNAL@{SIGNAL}!group12.c@{group12.c}}
+\subsubsection[{SIGNAL}]{\setlength{\rightskip}{0pt plus 5cm}SIGNAL (
+\begin{DoxyParamCaption}
+\item[{SIG\_\-USART0\_\-RECV}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_ab5f8e79f6ffa3be348924e573e8dcfd1}
+Function that actually receives the signals(commands) from the computer over the zigbee communication channel. It takes in the degree values and rotates the servo motors on the bot accordingly. 
+
+the degree sent from the computer is half the actual angle of rotation so that it can be sent in one byte. Hence, the actual degree is 2 times the received degree value.
+
+\hypertarget{group12_8c_abbbf5055286d09a73b87f57f71dfd0b9}{
+\index{group12.c@{group12.c}!uart0\_\-init@{uart0\_\-init}}
+\index{uart0\_\-init@{uart0\_\-init}!group12.c@{group12.c}}
+\subsubsection[{uart0\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void uart0\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group12_8c_abbbf5055286d09a73b87f57f71dfd0b9}
+Function To Initialize UART0 desired baud rate:9600 actual baud rate:9600 (error 0.0\%) char size: 8 bit parity: Disabled 
+
+\subsection{Variable Documentation}
+\hypertarget{group12_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}{
+\index{group12.c@{group12.c}!count@{count}}
+\index{count@{count}!group12.c@{group12.c}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf count} = 0}}
+\label{group12_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}
+\hypertarget{group12_8c_a433b1c9921d3b90f7c145c781a43f325}{
+\index{group12.c@{group12.c}!data@{data}}
+\index{data@{data}!group12.c@{group12.c}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf data}}}
+\label{group12_8c_a433b1c9921d3b90f7c145c781a43f325}
+initialization of globals used in the program \hypertarget{group12_8c_a3ad2418bacc6ee3c0ff8cc6ed2832ec9}{
+\index{group12.c@{group12.c}!degree@{degree}}
+\index{degree@{degree}!group12.c@{group12.c}}
+\subsubsection[{degree}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf degree} = 0}}
+\label{group12_8c_a3ad2418bacc6ee3c0ff8cc6ed2832ec9}

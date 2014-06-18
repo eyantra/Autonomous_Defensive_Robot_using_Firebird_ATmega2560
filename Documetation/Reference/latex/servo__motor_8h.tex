@@ -1,0 +1,151 @@
+\hypertarget{servo__motor_8h}{
+\section{servo\_\-motor.h File Reference}
+\label{servo__motor_8h}\index{servo\_\-motor.h@{servo\_\-motor.h}}
+}
+{\ttfamily \#include $<$avr/io.h$>$}\par
+{\ttfamily \#include $<$avr/interrupt.h$>$}\par
+{\ttfamily \#include $<$util/delay.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{servo__motor_8h_af87425963403c39dd2a5686722662e1b}{servo1\_\-pin\_\-config} (void)
+\item 
+void \hyperlink{servo__motor_8h_a9cbd58ccc49c66f6691fc3e8a4e06c07}{servo2\_\-pin\_\-config} (void)
+\item 
+void \hyperlink{servo__motor_8h_aea7136b3f5f3dee0bba462ad740018e0}{servo3\_\-pin\_\-config} (void)
+\item 
+void \hyperlink{servo__motor_8h_aef4c9169ac0c415352b359730a96bfd3}{servo\_\-port\_\-init} (void)
+\item 
+void \hyperlink{servo__motor_8h_a968c314be24f7043eeff034ebf7c4a03}{timer1\_\-init} (void)
+\item 
+void \hyperlink{servo__motor_8h_aa82c1241c9848dfe3ad36cd19ff2d3de}{init\_\-servo} (void)
+\item 
+void \hyperlink{servo__motor_8h_a5e83e38113e61aa98a5737499e18a31b}{servo\_\-1} (unsigned char degrees)
+\item 
+void \hyperlink{servo__motor_8h_a581d9af2c6c9d23ca521f637075e1bc1}{servo\_\-2} (unsigned char degrees)
+\item 
+void \hyperlink{servo__motor_8h_a13cace908a54e6c7b6e7ff259b2b1d90}{servo\_\-3} (unsigned char degrees)
+\item 
+void \hyperlink{servo__motor_8h_a6c7ed6efeeb194c0a0c511380a31a2e5}{servo\_\-1\_\-free} (void)
+\item 
+void \hyperlink{servo__motor_8h_ada43b85d1e8c8343f99fcdaa12b71c3e}{servo\_\-2\_\-free} (void)
+\item 
+void \hyperlink{servo__motor_8h_a24305cafe8f6103e8434f56aa0df538a}{servo\_\-3\_\-free} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{servo__motor_8h_aa82c1241c9848dfe3ad36cd19ff2d3de}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!init\_\-servo@{init\_\-servo}}
+\index{init\_\-servo@{init\_\-servo}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{init\_\-servo}]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-servo (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_aa82c1241c9848dfe3ad36cd19ff2d3de}
+Function to initialize all the peripherals \hypertarget{servo__motor_8h_af87425963403c39dd2a5686722662e1b}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo1\_\-pin\_\-config@{servo1\_\-pin\_\-config}}
+\index{servo1\_\-pin\_\-config@{servo1\_\-pin\_\-config}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo1\_\-pin\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void servo1\_\-pin\_\-config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_af87425963403c39dd2a5686722662e1b}
+Configure PORTB 5 pin for servo motor 1 operation \hypertarget{servo__motor_8h_a9cbd58ccc49c66f6691fc3e8a4e06c07}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo2\_\-pin\_\-config@{servo2\_\-pin\_\-config}}
+\index{servo2\_\-pin\_\-config@{servo2\_\-pin\_\-config}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo2\_\-pin\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void servo2\_\-pin\_\-config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_a9cbd58ccc49c66f6691fc3e8a4e06c07}
+Configure PORTB 6 pin for servo motor 2 operation \hypertarget{servo__motor_8h_aea7136b3f5f3dee0bba462ad740018e0}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo3\_\-pin\_\-config@{servo3\_\-pin\_\-config}}
+\index{servo3\_\-pin\_\-config@{servo3\_\-pin\_\-config}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo3\_\-pin\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void servo3\_\-pin\_\-config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_aea7136b3f5f3dee0bba462ad740018e0}
+Configure PORTB 7 pin for servo motor 3 operation \hypertarget{servo__motor_8h_a5e83e38113e61aa98a5737499e18a31b}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo\_\-1@{servo\_\-1}}
+\index{servo\_\-1@{servo\_\-1}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void servo\_\-1 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{degrees}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_a5e83e38113e61aa98a5737499e18a31b}
+Function to rotate Servo 1 by a specified angle in the multiples of 2.25 degrees \hypertarget{servo__motor_8h_a6c7ed6efeeb194c0a0c511380a31a2e5}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo\_\-1\_\-free@{servo\_\-1\_\-free}}
+\index{servo\_\-1\_\-free@{servo\_\-1\_\-free}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo\_\-1\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void servo\_\-1\_\-free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_a6c7ed6efeeb194c0a0c511380a31a2e5}
+servo\_\-free functions unlocks the servo motors from the any angle and make them free by giving 100\% duty cycle at the PWM. This function can be used to reduce the power consumption of the motor if it is holding load against the gravity. \hypertarget{servo__motor_8h_a581d9af2c6c9d23ca521f637075e1bc1}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo\_\-2@{servo\_\-2}}
+\index{servo\_\-2@{servo\_\-2}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void servo\_\-2 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{degrees}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_a581d9af2c6c9d23ca521f637075e1bc1}
+Function to rotate Servo 2 by a specified angle in the multiples of 2.25 degrees \hypertarget{servo__motor_8h_ada43b85d1e8c8343f99fcdaa12b71c3e}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo\_\-2\_\-free@{servo\_\-2\_\-free}}
+\index{servo\_\-2\_\-free@{servo\_\-2\_\-free}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo\_\-2\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void servo\_\-2\_\-free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_ada43b85d1e8c8343f99fcdaa12b71c3e}
+servo\_\-free functions unlocks the servo motors from the any angle and make them free by giving 100\% duty cycle at the PWM. This function can be used to reduce the power consumption of the motor if it is holding load against the gravity. \hypertarget{servo__motor_8h_a13cace908a54e6c7b6e7ff259b2b1d90}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo\_\-3@{servo\_\-3}}
+\index{servo\_\-3@{servo\_\-3}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}void servo\_\-3 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{degrees}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_a13cace908a54e6c7b6e7ff259b2b1d90}
+Function to rotate Servo 3 by a specified angle in the multiples of 2.25 degrees \hypertarget{servo__motor_8h_a24305cafe8f6103e8434f56aa0df538a}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo\_\-3\_\-free@{servo\_\-3\_\-free}}
+\index{servo\_\-3\_\-free@{servo\_\-3\_\-free}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo\_\-3\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void servo\_\-3\_\-free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_a24305cafe8f6103e8434f56aa0df538a}
+servo\_\-free functions unlocks the servo motors from the any angle and make them free by giving 100\% duty cycle at the PWM. This function can be used to reduce the power consumption of the motor if it is holding load against the gravity. \hypertarget{servo__motor_8h_aef4c9169ac0c415352b359730a96bfd3}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!servo\_\-port\_\-init@{servo\_\-port\_\-init}}
+\index{servo\_\-port\_\-init@{servo\_\-port\_\-init}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{servo\_\-port\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void servo\_\-port\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_aef4c9169ac0c415352b359730a96bfd3}
+Initialize the ports \hypertarget{servo__motor_8h_a968c314be24f7043eeff034ebf7c4a03}{
+\index{servo\_\-motor.h@{servo\_\-motor.h}!timer1\_\-init@{timer1\_\-init}}
+\index{timer1\_\-init@{timer1\_\-init}!servo_motor.h@{servo\_\-motor.h}}
+\subsubsection[{timer1\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void timer1\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{servo__motor_8h_a968c314be24f7043eeff034ebf7c4a03}
+TIMER1 initialization in 10 bit fast PWM mode prescale:256 WGM: 7) PWM 10bit fast, TOP=0x03FF actual value: 42.187Hz 
+
+Output compare eegister high value for servo 3
+
+\{COM1A1=1, COM1A0=0; COM1B1=1, COM1B0=0; COM1C1=1 COM1C0=0\} For Overriding normal port functionalit to OCRnA outputs. \{WGM11=1, WGM10=1\} Along With WGM12 in TCCR1B for Selecting FAST PWM Mode 
+

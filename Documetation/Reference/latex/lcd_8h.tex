@@ -1,0 +1,295 @@
+\hypertarget{lcd_8h}{
+\section{lcd.h File Reference}
+\label{lcd_8h}\index{lcd.h@{lcd.h}}
+}
+{\ttfamily \#include $<$avr/io.h$>$}\par
+{\ttfamily \#include $<$avr/interrupt.h$>$}\par
+{\ttfamily \#include $<$util/delay.h$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lcd_8h_a9d4ad5467cb8a39312513dfaaf4d950a}{FCPU}~11059200ul
+\item 
+\#define \hyperlink{lcd_8h_af8903d8eea3868940c60af887473b152}{RS}~0
+\item 
+\#define \hyperlink{lcd_8h_afc4ded33ac0ca43defcce639e965748a}{RW}~1
+\item 
+\#define \hyperlink{lcd_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}~2
+\item 
+\#define \hyperlink{lcd_8h_ab44cc79afa2e158e5173a42d0bdd01b0}{lcd\_\-port}~PORTC
+\item 
+\#define \hyperlink{lcd_8h_a0e1a587a6bb537fb5e9c836231291df4}{sbit}(reg, bit)~reg $|$= (1$<$$<$bit)
+\item 
+\#define \hyperlink{lcd_8h_aad24a3ffd9b61c778f99521f717864a9}{cbit}(reg, bit)~reg \&= $\sim$(1$<$$<$bit)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lcd_8h_aa239ab5a6704dda21c5071b32a3cf3a8}{init\_\-ports} ()
+\item 
+void \hyperlink{lcd_8h_a03dc9c23d8a1f0bb7e5b395c019f3732}{lcd\_\-reset} ()
+\item 
+void \hyperlink{lcd_8h_ac23e73124dc9fabae95671fe71d074a6}{lcd\_\-init} ()
+\item 
+void \hyperlink{lcd_8h_afff7370014e73715ce0d31b4d994c916}{lcd\_\-wr\_\-command} (unsigned char)
+\item 
+void \hyperlink{lcd_8h_a02b47802a409ab525f2fda28140150b0}{lcd\_\-wr\_\-char} (char)
+\item 
+void \hyperlink{lcd_8h_a8a87d9ade20f16ea6fcbb5e577f57692}{lcd\_\-line1} ()
+\item 
+void \hyperlink{lcd_8h_a7be548d155d3819a14a30964d7082f65}{lcd\_\-line2} ()
+\item 
+void \hyperlink{lcd_8h_a1eeb0747ef56e3dab0a64e7688b3ff65}{lcd\_\-string} (char $\ast$)
+\item 
+void \hyperlink{lcd_8h_af55f75f83e87baf043c835ef54412b99}{lcd\_\-port\_\-config} (void)
+\item 
+void \hyperlink{lcd_8h_a9d4f33c9f95262cc49d2898c14ec761d}{lcd\_\-port\_\-init} ()
+\item 
+void \hyperlink{lcd_8h_a3f8a3732239f1ff251be98da40c120e1}{lcd\_\-set\_\-4bit} ()
+\item 
+void \hyperlink{lcd_8h_a60675105b93bba6762aaab88d732365a}{lcd\_\-home} ()
+\item 
+void \hyperlink{lcd_8h_a58b03aa7464b2fb9b23e24fe8cd06df9}{lcd\_\-cursor} (char row, char column)
+\item 
+void \hyperlink{lcd_8h_a73a5ab32b7aee89eeb34133ff3fc8bc8}{lcd\_\-print} (char row, char coloumn, unsigned int value, int digits)
+\item 
+void \hyperlink{lcd_8h_aafed2ade168a085630c2fe8d776432f2}{init\_\-lcd} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{lcd_8h_a13006074294a071b6c7a268a498f77f7}{temp}
+\item 
+unsigned int \hyperlink{lcd_8h_a09cef70e6322053ea80ae603446346c5}{unit}
+\item 
+unsigned int \hyperlink{lcd_8h_ab84b805352ca4b7ecfc9601ddab528bc}{tens}
+\item 
+unsigned int \hyperlink{lcd_8h_a913b0b4b2d4fd1ccc45534741d386cc8}{hundred}
+\item 
+unsigned int \hyperlink{lcd_8h_aa790b5f78a8f90d800d64c46c3e40205}{thousand}
+\item 
+unsigned int \hyperlink{lcd_8h_ae98244497f01cb51c50a6a1d18642b71}{million}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{lcd_8h_aad24a3ffd9b61c778f99521f717864a9}{
+\index{lcd.h@{lcd.h}!cbit@{cbit}}
+\index{cbit@{cbit}!lcd.h@{lcd.h}}
+\subsubsection[{cbit}]{\setlength{\rightskip}{0pt plus 5cm}\#define cbit(
+\begin{DoxyParamCaption}
+\item[{}]{reg, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~reg \&= $\sim$(1$<$$<$bit)}}
+\label{lcd_8h_aad24a3ffd9b61c778f99521f717864a9}
+\hypertarget{lcd_8h_a22e6626f2c98ed902f8ded47f6438c05}{
+\index{lcd.h@{lcd.h}!EN@{EN}}
+\index{EN@{EN}!lcd.h@{lcd.h}}
+\subsubsection[{EN}]{\setlength{\rightskip}{0pt plus 5cm}\#define EN~2}}
+\label{lcd_8h_a22e6626f2c98ed902f8ded47f6438c05}
+\hypertarget{lcd_8h_a9d4ad5467cb8a39312513dfaaf4d950a}{
+\index{lcd.h@{lcd.h}!FCPU@{FCPU}}
+\index{FCPU@{FCPU}!lcd.h@{lcd.h}}
+\subsubsection[{FCPU}]{\setlength{\rightskip}{0pt plus 5cm}\#define FCPU~11059200ul}}
+\label{lcd_8h_a9d4ad5467cb8a39312513dfaaf4d950a}
+\hypertarget{lcd_8h_ab44cc79afa2e158e5173a42d0bdd01b0}{
+\index{lcd.h@{lcd.h}!lcd\_\-port@{lcd\_\-port}}
+\index{lcd\_\-port@{lcd\_\-port}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}\#define lcd\_\-port~PORTC}}
+\label{lcd_8h_ab44cc79afa2e158e5173a42d0bdd01b0}
+\hypertarget{lcd_8h_af8903d8eea3868940c60af887473b152}{
+\index{lcd.h@{lcd.h}!RS@{RS}}
+\index{RS@{RS}!lcd.h@{lcd.h}}
+\subsubsection[{RS}]{\setlength{\rightskip}{0pt plus 5cm}\#define RS~0}}
+\label{lcd_8h_af8903d8eea3868940c60af887473b152}
+\hypertarget{lcd_8h_afc4ded33ac0ca43defcce639e965748a}{
+\index{lcd.h@{lcd.h}!RW@{RW}}
+\index{RW@{RW}!lcd.h@{lcd.h}}
+\subsubsection[{RW}]{\setlength{\rightskip}{0pt plus 5cm}\#define RW~1}}
+\label{lcd_8h_afc4ded33ac0ca43defcce639e965748a}
+\hypertarget{lcd_8h_a0e1a587a6bb537fb5e9c836231291df4}{
+\index{lcd.h@{lcd.h}!sbit@{sbit}}
+\index{sbit@{sbit}!lcd.h@{lcd.h}}
+\subsubsection[{sbit}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbit(
+\begin{DoxyParamCaption}
+\item[{}]{reg, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~reg $|$= (1$<$$<$bit)}}
+\label{lcd_8h_a0e1a587a6bb537fb5e9c836231291df4}
+
+
+\subsection{Function Documentation}
+\hypertarget{lcd_8h_aafed2ade168a085630c2fe8d776432f2}{
+\index{lcd.h@{lcd.h}!init\_\-lcd@{init\_\-lcd}}
+\index{init\_\-lcd@{init\_\-lcd}!lcd.h@{lcd.h}}
+\subsubsection[{init\_\-lcd}]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-lcd (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_aafed2ade168a085630c2fe8d776432f2}
+Function to initialize the lcd \hypertarget{lcd_8h_aa239ab5a6704dda21c5071b32a3cf3a8}{
+\index{lcd.h@{lcd.h}!init\_\-ports@{init\_\-ports}}
+\index{init\_\-ports@{init\_\-ports}!lcd.h@{lcd.h}}
+\subsubsection[{init\_\-ports}]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_aa239ab5a6704dda21c5071b32a3cf3a8}
+\hypertarget{lcd_8h_a58b03aa7464b2fb9b23e24fe8cd06df9}{
+\index{lcd.h@{lcd.h}!lcd\_\-cursor@{lcd\_\-cursor}}
+\index{lcd\_\-cursor@{lcd\_\-cursor}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-cursor}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-cursor (
+\begin{DoxyParamCaption}
+\item[{char}]{row, }
+\item[{char}]{column}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a58b03aa7464b2fb9b23e24fe8cd06df9}
+Position the LCD cursor at \char`\"{}row\char`\"{}, \char`\"{}column\char`\"{}. \hypertarget{lcd_8h_a60675105b93bba6762aaab88d732365a}{
+\index{lcd.h@{lcd.h}!lcd\_\-home@{lcd\_\-home}}
+\index{lcd\_\-home@{lcd\_\-home}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-home}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a60675105b93bba6762aaab88d732365a}
+Function to bring cursor at home position \hypertarget{lcd_8h_ac23e73124dc9fabae95671fe71d074a6}{
+\index{lcd.h@{lcd.h}!lcd\_\-init@{lcd\_\-init}}
+\index{lcd\_\-init@{lcd\_\-init}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_ac23e73124dc9fabae95671fe71d074a6}
+Function to Initialize LCD \hypertarget{lcd_8h_a8a87d9ade20f16ea6fcbb5e577f57692}{
+\index{lcd.h@{lcd.h}!lcd\_\-line1@{lcd\_\-line1}}
+\index{lcd\_\-line1@{lcd\_\-line1}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-line1}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-line1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a8a87d9ade20f16ea6fcbb5e577f57692}
+\hypertarget{lcd_8h_a7be548d155d3819a14a30964d7082f65}{
+\index{lcd.h@{lcd.h}!lcd\_\-line2@{lcd\_\-line2}}
+\index{lcd\_\-line2@{lcd\_\-line2}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-line2}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-line2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a7be548d155d3819a14a30964d7082f65}
+\hypertarget{lcd_8h_af55f75f83e87baf043c835ef54412b99}{
+\index{lcd.h@{lcd.h}!lcd\_\-port\_\-config@{lcd\_\-port\_\-config}}
+\index{lcd\_\-port\_\-config@{lcd\_\-port\_\-config}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-port\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-port\_\-config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_af55f75f83e87baf043c835ef54412b99}
+Function to configure LCD port \hypertarget{lcd_8h_a9d4f33c9f95262cc49d2898c14ec761d}{
+\index{lcd.h@{lcd.h}!lcd\_\-port\_\-init@{lcd\_\-port\_\-init}}
+\index{lcd\_\-port\_\-init@{lcd\_\-port\_\-init}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-port\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-port\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a9d4f33c9f95262cc49d2898c14ec761d}
+Function to Initialize PORTS \hypertarget{lcd_8h_a73a5ab32b7aee89eeb34133ff3fc8bc8}{
+\index{lcd.h@{lcd.h}!lcd\_\-print@{lcd\_\-print}}
+\index{lcd\_\-print@{lcd\_\-print}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-print (
+\begin{DoxyParamCaption}
+\item[{char}]{row, }
+\item[{char}]{coloumn, }
+\item[{unsigned int}]{value, }
+\item[{int}]{digits}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a73a5ab32b7aee89eeb34133ff3fc8bc8}
+Function To Print Any input value upto the desired digit on LCD \hypertarget{lcd_8h_a03dc9c23d8a1f0bb7e5b395c019f3732}{
+\index{lcd.h@{lcd.h}!lcd\_\-reset@{lcd\_\-reset}}
+\index{lcd\_\-reset@{lcd\_\-reset}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a03dc9c23d8a1f0bb7e5b395c019f3732}
+\hypertarget{lcd_8h_a3f8a3732239f1ff251be98da40c120e1}{
+\index{lcd.h@{lcd.h}!lcd\_\-set\_\-4bit@{lcd\_\-set\_\-4bit}}
+\index{lcd\_\-set\_\-4bit@{lcd\_\-set\_\-4bit}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-set\_\-4bit}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-set\_\-4bit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a3f8a3732239f1ff251be98da40c120e1}
+Function to Reset LCD \hypertarget{lcd_8h_a1eeb0747ef56e3dab0a64e7688b3ff65}{
+\index{lcd.h@{lcd.h}!lcd\_\-string@{lcd\_\-string}}
+\index{lcd\_\-string@{lcd\_\-string}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a1eeb0747ef56e3dab0a64e7688b3ff65}
+Function to Print String on LCD \hypertarget{lcd_8h_a02b47802a409ab525f2fda28140150b0}{
+\index{lcd.h@{lcd.h}!lcd\_\-wr\_\-char@{lcd\_\-wr\_\-char}}
+\index{lcd\_\-wr\_\-char@{lcd\_\-wr\_\-char}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-wr\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-wr\_\-char (
+\begin{DoxyParamCaption}
+\item[{char}]{letter}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_a02b47802a409ab525f2fda28140150b0}
+Function to Write Data on LCD \hypertarget{lcd_8h_afff7370014e73715ce0d31b4d994c916}{
+\index{lcd.h@{lcd.h}!lcd\_\-wr\_\-command@{lcd\_\-wr\_\-command}}
+\index{lcd\_\-wr\_\-command@{lcd\_\-wr\_\-command}!lcd.h@{lcd.h}}
+\subsubsection[{lcd\_\-wr\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\_\-wr\_\-command (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{cmd}
+\end{DoxyParamCaption}
+)}}
+\label{lcd_8h_afff7370014e73715ce0d31b4d994c916}
+Function to Write Command on LCD 
+
+\subsection{Variable Documentation}
+\hypertarget{lcd_8h_a913b0b4b2d4fd1ccc45534741d386cc8}{
+\index{lcd.h@{lcd.h}!hundred@{hundred}}
+\index{hundred@{hundred}!lcd.h@{lcd.h}}
+\subsubsection[{hundred}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf hundred}}}
+\label{lcd_8h_a913b0b4b2d4fd1ccc45534741d386cc8}
+\hypertarget{lcd_8h_ae98244497f01cb51c50a6a1d18642b71}{
+\index{lcd.h@{lcd.h}!million@{million}}
+\index{million@{million}!lcd.h@{lcd.h}}
+\subsubsection[{million}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf million}}}
+\label{lcd_8h_ae98244497f01cb51c50a6a1d18642b71}
+\hypertarget{lcd_8h_a13006074294a071b6c7a268a498f77f7}{
+\index{lcd.h@{lcd.h}!temp@{temp}}
+\index{temp@{temp}!lcd.h@{lcd.h}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf temp}}}
+\label{lcd_8h_a13006074294a071b6c7a268a498f77f7}
+\hypertarget{lcd_8h_ab84b805352ca4b7ecfc9601ddab528bc}{
+\index{lcd.h@{lcd.h}!tens@{tens}}
+\index{tens@{tens}!lcd.h@{lcd.h}}
+\subsubsection[{tens}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf tens}}}
+\label{lcd_8h_ab84b805352ca4b7ecfc9601ddab528bc}
+\hypertarget{lcd_8h_aa790b5f78a8f90d800d64c46c3e40205}{
+\index{lcd.h@{lcd.h}!thousand@{thousand}}
+\index{thousand@{thousand}!lcd.h@{lcd.h}}
+\subsubsection[{thousand}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf thousand}}}
+\label{lcd_8h_aa790b5f78a8f90d800d64c46c3e40205}
+\hypertarget{lcd_8h_a09cef70e6322053ea80ae603446346c5}{
+\index{lcd.h@{lcd.h}!unit@{unit}}
+\index{unit@{unit}!lcd.h@{lcd.h}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf unit}}}
+\label{lcd_8h_a09cef70e6322053ea80ae603446346c5}
